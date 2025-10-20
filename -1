@@ -1,0 +1,9 @@
+text='Nicușor Dan dorește reintroducerea SRI în lupta împotriva corupției Care sunt riscurile pentru democrație'
+first= text[:len(text)//2].upper()
+second=text[len(text)//2:][::-1],text[len(text)//2+1].upper()
+import re
+text3=re.sub(r'[?!.,]','',first)
+print(text3)
+import string
+text4 = ''.join(ch for ch in second if ch not in string.punctuation)
+print(text4)
